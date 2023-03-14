@@ -39,6 +39,8 @@
 */
 
 // Tarea: Ahora te toca a vos! Acá abajo escribí una alerta que diga "Hola mundo!"
+//alert('hola Mundo!!!')
+
 
 
 // Tarea: Una vez que la alerta funcione, comentala poniendo '//' en la línea donde está el código y guardá los cambios.
@@ -46,7 +48,7 @@
 
 
 // Tarea: Ahora probá hacer un console.log de un mensaje que queramos.
-
+console.log('Hola Mundo!!!')
 
 // Consejo: Para recargar el navegador podemos apretar 'CMD + R' en Mac y 'CTRL + R' en
 //      Windows.
@@ -228,8 +230,8 @@
 
     Consejo: Podemos aceptar múltiples argumentos (tambien llamados parámetros) separándolos con una coma ','.
 
-         function nombreFunction(argumento1, argumento2) {
-         }
+        function nombreFunction(argumento1, argumento2) {
+        }
 */
 
 // TAREA: Es tu turno de crear una función!
@@ -341,7 +343,7 @@
         //algo
     else
         //algo que va a pasar si no se cumple ningún otra condición
-        
+
 
     Ejemplo:
 
@@ -354,7 +356,7 @@
         console.log('Nuestro número es igual a 7');
     }
 
-    Consejo: Podemos usar la cantidad de 'else if' que queramos uno después del otro, 
+    Consejo: Podemos usar la cantidad de 'else if' que queramos uno después del otro,
     el primero que es 'verdadero' es el único que pasa.
 */
 
@@ -379,7 +381,7 @@
     =================
     Poner un signo de exclamación (!) antes de un valor Booleano nos da el valor OPUESTO.
     Este operador ! se llama el operador "not".
-    
+
     El resultado de una comparación es un valor Booleano, lo podemos guardar en una variable así:
 
     const bool = (1 < 2);
