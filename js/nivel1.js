@@ -58,6 +58,9 @@ console.log('Hola Mundo!!!')
 //      Windows.
 
 
+//let nombreDeVariable;
+//console.log('nombreDeVariable es ' + nombreDeVariable);
+
 /*
     Variables
     =========
@@ -82,7 +85,9 @@ console.log('Hola Mundo!!!')
     También podemos crear (declarar) y darle valor (asignar) a una variable en un solo paso (la INICIALIZAMOS).
 
     let nuevaVariable = 1;
+*/
 
+/*
     Como pueden ver, le podemos dar distintos tipos de valores a nuestras variables -
     Cadenas de texto (String), Numeros (Number), Booleanos (Boolean), etc.
 
@@ -104,6 +109,9 @@ console.log('Hola Mundo!!!')
 
 // TAREA: Creá 2 variables indefinidas, llamadas numeroUno y numeroDos.
 
+let numeroUno;
+let numeroDos;
+
 
 /*
     Podés usar el nombre de tus variables pare representar qué información tienen adentro, por ejemplo:
@@ -117,6 +125,12 @@ console.log('Hola Mundo!!!')
 // Crear 2 variables nuevas, una con tu nombre, la segunda con tu edad. Dales un nombre apropriado y
 // mostralas con un alert.
 
+/*
+let miNombre = "Gabriel";
+let miEdad = 36;
+alert("Mi nombre es " + miNombre + ", y tengo " + miEdad + " años.");
+
+*/
 
 // Consejo: para mostrar 2 variables de texto al mismo tiempo, las podés unir usando el signo '+'. Ejemplo:
 
@@ -151,10 +165,15 @@ console.log('Hola Mundo!!!')
 */
 
 // TAREA: Crear una constante y mostrarla con un alert
+/*
+const APELLIDO = "Blanco"
+alert(APELLIDO)
+*/
 
 
 // TAREA: Intentar asignar un valor a una constante y ver qué pasa (mirar la consola)
 
+//APELLIDO = "Gris"
 
 // Consejo: No te olvides de comentar (//) los alerts y los errores intencionales (como en la tarea anterior) para
 // que los alerts no aparezcan cada vez, y para que los errores no hagan que el programa se detenga.
@@ -185,6 +204,11 @@ console.log('Hola Mundo!!!')
 // la 1ra variable multiplicada (con el operador *) por la 2nda variable.
 // Mostrar el valor de resultadoMultiplicacion con un alert o un console.log
 
+let diez = 10;
+let tres = 3;
+const resultadoMultiplicacion = diez * tres;
+
+console.log(resultadoMultiplicacion);
 
 /*
     Funciones
