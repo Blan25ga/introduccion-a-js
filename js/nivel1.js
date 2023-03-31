@@ -264,17 +264,46 @@ console.log(resultadoMultiplicacion);
 // Escribí código para que acepte 2 argumentos (numero1 y numero2)
 // Escribí código para que devuelva (return) la suma de numero1 y numero2
 // Ejecutá la función sumar y mostrá su resultado en la consola
+function sumar(numero1, numero2) {
+  return numero1 + numero2;
+}
+console.log(sumar(1, 10))
+
 
 
 // TAREA: Ahora creemos otra función llamada 'restar'
 //       Que acepte 2 números como parámetro y los reste, y que devuelva ese valor.
 // Ejecutá la función con los números 5 y 1 y mostralos con console.log
 
-
+function restar(numero1, numero2) {
+  return numero1 - numero2;
+}
+console.log(restar(5, 1))
 // Consejo: Sabías que en vez de pasar los números directamente a tu función podés crear variables con esos números
 // y pasarlos como parámetros? Probalo!
 
 // Consejo: Dejá las funciones como están, no las comentes, las vamos a usar de nuevo.
+
+
+/*let anioNacimiento = 1986
+let anioActual = 2023
+
+let miEdad = restar(anioActual, anioNacimiento);
+console.log('Mi esadad es ' + miEdad + ' Años')
+
+let edadUsuario = prompt('Por favor ingrese su edad', '30')
+
+*/
+// El prompt es una función que especifica el mensaje de alerta y el tipo de alerta.
+// El prompt se puede usar con una cadena, un número, una función, un objeto o un array.
+
+// Interactuar con un imput de texto.
+function salduar(nombre) {
+  return 'Hola! ' + nombre;
+}
+
+let miNombre = prompt('Cual es tu nombre?')
+console.log(salduar(miNombre))
 
 /*
     Condicionales If-Else
@@ -288,6 +317,7 @@ console.log(resultadoMultiplicacion);
     parte del código tiene que ejecutarse.
 
     Estructura:
+
 
     if (condición) {
         // hacer esto (la condición se cumplió)
@@ -309,6 +339,7 @@ console.log(resultadoMultiplicacion);
     }
 */
 
+
 /*
     Operadores de comparación
     ====================
@@ -323,8 +354,8 @@ console.log(resultadoMultiplicacion);
     !== //Distinto que (dándole importancia al TIPO)
 
     Atención: No mezclar '=' y '==' ó '===' porque tienen distintos significados.
-         '=' significa "asignar". miVariable = 1
-         '===' significa preguntar si es "exactamente igual a". miVariable === 1 es verdadero si miVariable es 1, y falso si es cualquier otra cosa distinta de 1.
+        '=' significa "asignar". miVariable = 1
+        '===' significa preguntar si es "exactamente igual a". miVariable === 1 es verdadero si miVariable es 1, y falso si es cualquier otra cosa distinta de 1.
 
     También están los operadores '==' y '!=' que son muy similares a '===' y '!==' con una pequeña variación,
     que los hacen que sean más propensos a errores, así que siempre que sea posible vamos a usar '===' y '!=='.
