@@ -265,7 +265,7 @@ console.log(resultadoMultiplicacion);
 // Escribí código para que devuelva (return) la suma de numero1 y numero2
 // Ejecutá la función sumar y mostrá su resultado en la consola
 function sumar(numero1, numero2) {
-  return numero1 + numero2;
+    return numero1 + numero2;
 }
 console.log(sumar(1, 10))
 
@@ -276,7 +276,7 @@ console.log(sumar(1, 10))
 // Ejecutá la función con los números 5 y 1 y mostralos con console.log
 
 function restar(numero1, numero2) {
-  return numero1 - numero2;
+    return numero1 - numero2;
 }
 console.log(restar(5, 1))
 // Consejo: Sabías que en vez de pasar los números directamente a tu función podés crear variables con esos números
@@ -298,12 +298,17 @@ let edadUsuario = prompt('Por favor ingrese su edad', '30')
 // El prompt se puede usar con una cadena, un número, una función, un objeto o un array.
 
 // Interactuar con un imput de texto.
+
+/*
+
 function salduar(nombre) {
-  return 'Hola! ' + nombre;
+    return 'Hola! ' + nombre;
 }
 
 let miNombre = prompt('Cual es tu nombre?')
 console.log(salduar(miNombre))
+
+*/
 
 /*
     Condicionales If-Else
@@ -332,7 +337,7 @@ console.log(salduar(miNombre))
     Ejemplo
 
     const numero = 7;
-    if (numero >= 7) {
+    if (numero >= 7) { 
         console.log('Nuestro número es mayor o igual que 7');
     } else {
         console.log('Nuestro número es menor que 7');
@@ -386,6 +391,29 @@ console.log(salduar(miNombre))
 
 // TAREA: Cambiar el operador a '-', y fijarse que llame a la función 'restar' en vez de a la de 'sumar'.
 
+let operador = "+"
+
+let numeros = 6
+let numeros1 = 2
+
+
+function sumar(numeros, numeros1) {
+    return numeros + numeros1
+}
+
+function restar(numeros, numeros1) {
+    return numeros - numeros1
+}
+
+
+if (operador === "+") {
+    console.log("La suma de los numeros es " + sumar(numeros, numeros1))
+} else {
+    console.log("La resta de los numeros es " + restar(numeros, numeros1))
+}
+
+
+
 
 /*
     'If' - 'Else if' - 'Else'
@@ -415,10 +443,16 @@ console.log(salduar(miNombre))
     el primero que es 'verdadero' es el único que pasa.
 */
 
+// Blackbox autocomplete
 // TAREA: Creemos 2 funciones más: dividir y multiplicar.
 
+function dividir(numeros, numeros1) {
+    return numeros / numeros1
+}
 
-
+function multiplicar(numeros, numeros1) {
+    return numeros * numeros1
+}
 
 
 // TAREA: Reescribamos el if-else que teníamos y extendámolos, agregando:
@@ -426,6 +460,18 @@ console.log(salduar(miNombre))
 //       'else if' el 'operador' es igual a '/' - llamar a la función 'dividir'.
 //       'else if' el 'operador' es igual a '*' - llamar a la función 'multiplicar'.
 //       else console.log - "Perdón, no conozco ese operador".
+
+if (operador === "+") {
+    console.log("La suma de los numeros es " + sumar(numeros, numeros1))
+} else if (operador === "-") {
+    console.log("La resta de los numeros es " + restar(numeros, numeros1))
+} else if (operador === "/") {
+    console.log("La división de los numeros es " + dividir(numeros, numeros1))
+} else if (operador === "*") {
+    console.log("La multiplicación de los numeros es " + multiplicar(numeros, numeros1))
+} else {
+    console.log("Perdón, no conozco ese operador")
+}
 
 
 
@@ -457,8 +503,12 @@ console.log(salduar(miNombre))
 
 // TAREA: usando el operador !, Intentá invertir una variable (de true a false, o de false a true) e imprimí el
 // resultado en la consola.
+const bool = (5 > 3)
+console.log(bool)
+console.log(!bool)
 
-
+let argentinaNoEsCampeonDelMundo = true
+console.log(!argentinaNoEsCampeonDelMundo)
 ////////////////////////////////////////////////////////////////////////////
 // Felicitaciones! Terminaste el Nivel 1 de la introducción a JavaScript! //
 // El siguiente nivel es el que está en nivel2.js                         //

@@ -37,7 +37,7 @@ if (operador === '+') {
     resultado = restar(numero1, numero2);
 }
 
-//https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings
 console.log(
     `El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`
 );
