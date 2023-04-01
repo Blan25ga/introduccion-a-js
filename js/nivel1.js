@@ -509,6 +509,7 @@ console.log(!bool)
 
 let argentinaNoEsCampeonDelMundo = true
 console.log(!argentinaNoEsCampeonDelMundo)
+// false
 ////////////////////////////////////////////////////////////////////////////
 // Felicitaciones! Terminaste el Nivel 1 de la introducción a JavaScript! //
 // El siguiente nivel es el que está en nivel2.js                         //
