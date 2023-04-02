@@ -503,7 +503,7 @@ if (operador === "+") {
 
 // TAREA: usando el operador !, Intentá invertir una variable (de true a false, o de false a true) e imprimí el
 // resultado en la consola.
-const bool = (5 > 3)
+const bool = 5 > 3
 console.log(bool)
 console.log(!bool)
 
