@@ -19,7 +19,7 @@
     <script src="js/nivel1.js"></script>
 
     Así es como has estado ejecutando el archivo nivel1.js en un navegador. Ahora cambia
-     nivel1.js para apuntar a este archivo - nivel2.js.
+    ivel1.js para apuntar a este archivo - nivel2.js.
 
     ¡Ahora estás listo para comenzar!
 */
@@ -43,7 +43,7 @@
 //       cosas que te gustan.
 
 
-
+let comidasFavoritas = ['asado', 'pizza', 'milaneza', 'choripan']
 
 
 
@@ -51,7 +51,7 @@
 /*
     Tamaño del Array
     ================
-    
+
     Podemos verificar fácilmente cuántos elementos tenemos en nuestro Array con una propiedad:
     '.length'
 
@@ -63,7 +63,7 @@
 
 // TAREA: Verifique cuántos valores tiene en su array comidasFavoritas.
 // imprimi utilizando console.log el resultado.
-
+//console.log(comidasFavoritas.length)
 
 
 
@@ -91,7 +91,7 @@
 // TAREA: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
 
 
-
+//console.log(comidasFavoritas[2])
 
 
 
@@ -100,7 +100,7 @@
     =========================
 
     También podemos reemplazar los valores dentro de los arrays asignando un nuevo valor a
-    un índice específico.
+    un índice específico.
 
     Ejemplo:
 
@@ -115,14 +115,14 @@
 // TAREA: Toma tu array de comidasFavoritas y reemplaza el primer valor
 // con cualquier otra cosa.
 
-
-
+comidasFavoritas[0] = "Panchos";
+//console.log(comidasFavoritas[0]);
 
 
 
 // TAREA: console.log todo el array para verificar.
 
-
+//console.log(comidasFavoritas)
 
 
 
@@ -134,7 +134,7 @@
     ============
 
     Si deseas agregar nuevos valores a un array existente, podes usar el método
-     '.push()'. Push agregará un nuevo valor al final del array.
+    '.push()'. Push agregará un nuevo valor al final del array.
 
     Ejemplo:
 
@@ -146,13 +146,14 @@
 
 // TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
 
-
+comidasFavoritas.push('Fideos con tuco')
 
 
 
 
 // TAREA: console.log todo el array para verificar.
 
+//console.log(comidasFavoritas)
 
 
 
@@ -163,28 +164,35 @@
     =============================
 
     Un array es lo que se conoce como un "tipo de referencia". Lo que esto significa es que
-    incluso si un array se declara (crea) usando 'const', los valores *dentro* del
-    array todavía se pueden cambiar; el array en sí no se puede sobrescribir.
+    incluso si un array se declara (crea) usando 'const', los valores *dentro* del
+    array todavía se pueden cambiar; el array en sí no se puede sobrescribir.
 
     Ejemplo:
 
     const animales = ['gato', 'perro', 'caballo'];
 
-    // Esto es legal y funciona de la misma manera que cuando los animales son una variable:
+
+    -Esto es legal y funciona de la misma manera que cuando los animales son una variable:
     animales[1] = 'pez';
     animales.push('conejo');
 
 
-    // Esto es ilegal y devolverá un error igual al que se genera al cambiar cualquier constante:
+    -Esto es ilegal y devolverá un error igual al que se genera al cambiar cualquier constante:
     animales = [ 'mouse', 'elephant' ];
  */
 
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
 
 
+const nuevoArray = [2, 4, 6, 8, 10]
+//console.log(nuevoArray)
+nuevoArray[0] = 3
+//console.log(nuevoArray)
 
-
-
+/*
+No puedo cambiar un array entero que este conformado por una constante,
+solo puedo cambiar valores por separado o agregar valores.
+*/
 
 
 // TAREA: Observa lo que sucede si agregas algo con.push(), cambias algo
@@ -199,26 +207,26 @@
 /*
     Bucles
     ======
-    
+
     ¡La gente siempre ha sido perezosa, pero a veces avanza! A nosotros
-    no nos gusta repetir las mismas aburridas acciones una y otra vez, 
+    no nos gusta repetir las mismas aburridas acciones una y otra vez,
     así que buscamos formas de evitarlo.
 
-    La programación es igual. Por ejemplo, si quiero imprimir 10 veces 'JavaScript 
-    es increible!', ¿cuáles son mis opciones?. Por supuesto, puedo escribir 
-    diez líneas de código repitiendo la misma instrucción, pero también 
+    La programación es igual. Por ejemplo, si quiero imprimir 10 veces 'JavaScript
+    es increible!', ¿cuáles son mis opciones?. Por supuesto, puedo escribir
+    diez líneas de código repitiendo la misma instrucción, pero también
     puedo decirle a la computadora que lo repita en lugar de que yo lo escriba 10 veces.
 
     Para esto usamos bucles.
 
-    Cada ciclo debe tener tres cosas principales:
-     - un punto de partida
-     - una condición (punto final)
-     - un contador (un paso)
+    Cada ITERACION debe tener tres cosas principales:
+    - un punto de partida = 0/1
+    - una condición (punto final)
+    - un contador (un paso)
 
-     Si te olvidas uno de estos, ¡podes entrar en un bucle infinito!
+    Si te olvidas uno de estos, ¡podes entrar en un bucle infinito!
 
-     Veamos diferentes estructuras de bucle.
+    Veamos diferentes estructuras de bucle.
 
 */
 
@@ -230,23 +238,37 @@
 
     Ejemplo:
 
-    // punto de partida
+    /punto de partida
     let numero = 0;
 
     while (numero < 10) {
-      // 'menos de 10' es una condición (punto final)
+      /'menos de 10' es una condición (punto final)
 
       console.log('JavaScript es increíble!');
 
       numero = numero + 1;
-      // + 1 es un contador / tamaño del paso
+      /+ 1 es un contador / tamaño del paso
     }
 */
 
+let numero = 0
+
+while (numero < 10) {
+  numero++;
+}
+
+//el bucle while va a consultar hasta que llegue al final, aca comienza en cero y va
+//sumar hasta llegar a 10, cuando se cumpla la condicion, finalizara el bucle.
+
+
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
-//       diez a uno.
+// diez a uno.
 
-
+let a = 10;
+while (a >= 1) {
+  console.log(a);
+  a--;
+}
 
 
 
@@ -256,7 +278,7 @@
     ==========
 
     Los bucles for son muy similares al 'bucle while'. En un bucle for
-    se declara un contador en la declaración.
+    se declara un contador en la declaración.
 
     Ejemplo:
 
@@ -268,8 +290,25 @@
 
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
+let i;
+for (i = 3; i <= 22; i = i + 3) { //i++ es otra forma de expresar i = i + 1.
+  console.log(i);
 
+}
+/*
+Este código inicializa una variable i en 3 y luego usa un bucle for
+para imprimir el valor de i en cada iteración del bucle.
+En cada iteración, la variable i se incrementa en 3
+*/
 
+//Ejercicio de algoritmo de ejemplo: "calcular notas de parciales"
+
+const notaParciales = [10, 4, 5, 6]
+let totalNotas = 0
+for (let i = 0; i < notaParciales.length; i++) {
+  totalNotas += notaParciales[i]
+}
+console.log('El promedio es ' + totalNotas / notaParciales.length)
 
 
 
@@ -278,10 +317,10 @@
     ===========================
 
     Ahora que conocemos los bucles, vamos a usar cada valor de mi lista de animales
-    y expresar mi amor por cada uno ¿Cómo lo voy a hacer?
+    y expresar mi amor por cada uno ¿Cómo lo voy a hacer?
 
-    Podemos usar un 'bucle for' para iterar a través de nuestro array y obtener cada valor
-    de eso.
+    Podemos usar un 'bucle for' para iterar a través de nuestro array y obtener cada valor
+    de eso.
 
     Nota: i++ es otra forma de expresar i = i + 1.
 
@@ -300,28 +339,27 @@
 
 
 
-
 /*
     Bucles y Logica
     ===============
-    
+
     Traigamos bucles junto con las declaraciones if / else que aprendimos en
-    nivel 1, y hagamos algo interesante.
+    nivel 1, y hagamos algo interesante.
 
 
-    Contemos de 10 a 0 e imprimamos todos los números. Pero cuando lleguemos al
-    medio (5) imprimimos 'Estamos en el medio!'.
-
-    Ejemplo:
-
-    for (let i = 10; i >= 0; i = i - 1) {
-        if (i === 5) {
-            console.log('Estamos en el medio!');
-        } else {
-            console.log(i);
-        }
-    }
+    Contemos de 10 a 0 e imprimamos todos los números. Pero cuando lleguemos al
+    medio (5) imprimimos 'Estamos en el medio!'.
 */
+Ejemplo:
+
+for (let i = 10; i >= 0; i = i - 1) {
+  if (i === 5) {
+    console.log('Estamos en el medio!');
+  } else {
+    console.log(i);
+  }
+}
+
 
 // TAREA: Ha llegado el momento de un ejercicio clásico: 'FizzBuzz'.
 
@@ -331,6 +369,21 @@
 // * Si es un múltiplo de 5, imprime 'Buzz'.
 // * Si es un múltiplo de 3 y 5, imprime 'FizzBuzz'.
 // * Para todo lo demás, imprime el número mismo.
+
+
+
+for (let i = 1; i <= 50; i++) {       // Crea un ciclo for que cuenta del 1 al 50
+  if (i % 3 === 0 && i % 5 === 0) {   // Si el número es múltiplo de tres y cinco, imprime FizzBuzz
+    console.log('FizzBuzz');
+  } else if (i % 3 === 0) {        // Si el número es múltiplo de tres, imprime Fizz
+    console.log('Fizz');
+  } else if (i % 5 === 0) {       // Si el número es múltiplo de cinco, imprime Buzz
+    console.log('Buzz');
+  } else {                        // Para todo lo demás, imprime el número mismo
+    console.log(i);
+  }
+}
+
 
 // NOTA: Es posible que desees utilizar el operador aritmético modulo (%):
 // Calcula el resto al dividir.
