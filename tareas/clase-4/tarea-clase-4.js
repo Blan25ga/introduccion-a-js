@@ -42,12 +42,17 @@ for (let i = 1; i <= 50; i++) {          // Crea un ciclo for que cuenta del 1 a
 
 // Calcular el promedio de todos los números en un array de números. (y ponerlo en una función)
 // ej.: calcularPromedio([10,5,4,2,8])
-function promedio() {
-    let sum = 0;
-    for (let i = 1; i <= 50; i++) {
-        sum += i;
+
+function calcularPromedio(array) {
+    let suma = 0
+    for (let i = 0; i < array.length; i++) {
+        suma += array[i];
     }
-    return sum / 50;
+    return suma / array.length;
 }
 
-console.log(promedio());
+let numeros = [10, 5, 4, 2, 8];
+let promedio = calcularPromedio(numeros);
+
+console.log("El promedio es: " + promedio)
+
