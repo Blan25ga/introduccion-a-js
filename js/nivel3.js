@@ -53,7 +53,7 @@
     Los archivos CSS consisten en "bloques de declaración". Cada bloque de
     declaración está compuesto de un "selector" y de un conjunto de reglas de estilo
     visuales. Una declaración se ve así:
-    
+
     [selector] {
       nombre-de-estilo: valor;
       nombre-de-estilo: valor;
@@ -112,17 +112,28 @@
     Ejemplo:
 
     const nuestroTwitter = document.querySelector('.twitter');
-
-    // Podemos guardar elementos de la página en variables, al igual que como cualquier otro valor!
-    // De todas formas, fijate que un elemento de página es un objeto,
-    // el cual es un "tipo de referencia", así como los arrays (mirá el nivel 2).
-    // Eso quiere decir que se pueden cambiar los atributos y propiedades del elemento,
-    // pero no la variable en sí misma. Vas a ver esto en acción ahora mismo.
 */
+
+// Podemos guardar elementos de la página en variables, al igual que como cualquier otro valor!
+// De todas formas, fijate que un elemento de página es un objeto,
+// el cual es un "tipo de referencia", así como los arrays (mirá el nivel 2).
+// Eso quiere decir que se pueden cambiar los atributos y propiedades del elemento,
+// pero no la variable en sí misma. Vas a ver esto en acción ahora mismo.
+
 
 // TAREA: Ahora te toca a vos! — Obtené la etiqueta h1 de la página y guardala en una variable
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
+
+const nuestroTitulo = document.querySelector('h1'); // Obtenemos el elemento h1 de la página.
+console.log(nuestroTitulo); // Sale por consola  de la página
+console.log(nuestroTitulo.textContent); // sale por consolo solo el contenido desl tesxto, sin las etiquetas como en console.log anterior.
+
+nuestroTitulo.innerText = 'Hola r/Argentina Programa'
+console.log(nuestroTitulo); // Lo guardamos en una variable llamada nuestroTitulo. Esto lo guard
+
+
+
 
 
 
@@ -137,31 +148,38 @@
     pie de página tenemos una lista desordenada (<ul>), con tres elementos de lista (<li>) adentro.
     Obtengamoslos todos con un array de los elementos de la página. Cuando querramos obtener multiples elementos,
     podemos utilizar el método '.querySelectorAll', el cual nos dará una lista con las coincidencias.
-
-    Ejemplo:
-
-    // Esto obtendrá todos los <li> de la página.
-    const mediaLinks = document.querySelectorAll('li');
 */
+//Ejemplo:
+
+// Esto obtendrá todos los <li> de la página.
+
+
+// En el ejercicio se puede lograr obtener todas las páginas con una lista ordenada
+// de elementos similares. En el ejercicio se logró obtener todas las págines con una
+
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
+const mediaLinks = document.querySelectorAll('li');
+console.log(mediaLinks); // Esto no lo logra pasar por consola. No consigue obtener todas las et
 
 
 
 
 
 
-// TAREA: Ahora utilizá console.log para ver la cantidad de 
+
+// TAREA: Ahora utilizá console.log para ver la cantidad de
 // elementos li que hay con mediaLinks.length
-
-
+console.log(mediaLinks.length); // Esto logró obtener 3.
 
 
 
 
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
-
+for (let i = 0; i < mediaLinks.length; i++) {
+    console.log(mediaLinks[i].textContent);
+}
 
 
 
@@ -170,19 +188,26 @@
 /*
     Propiedades de los elementos
     ==================
-    
+
     Ok, hasta acá todo bien. Peeeroo, ¿que pasa si queremos obtener SOLO el texto
     de nuestra etiqueta 'h1'?
     Los elementos de página tienen una propiedad para esto: '.textContent'.
-
-    Ejemplo:
-
-    nuestroTwitter.textContent;
-    // Obtendremos el texto: 'Twitter: @MusesCodeJSSyd @MusesCodeJSMelb @MCJSHobart @MCJSPerth @BrisMuses'.
 */
+
+//    Ejemplo:
+
+//n   uestroTwitter.textContent;
+
+// Obtendremos el texto: 'Twitter: @MusesCodeJSSyd @MusesCodeJSMelb @MCJSHobart @MCJSPerth @BrisMuses'.
+
 
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
+
+const h1 = document.querySelector('h1'); // Esto lo logró obtener el elemento 'h1' de la
+
+console.log(h1.textContent); // texto: 'Muses Code JS Sydy, Me, Lahr, Bob, and Perth
+
 
 
 
@@ -193,7 +218,7 @@
     Editar el contenido de la página
     ====================
 
-    Podemos simplemente cambiar el contenido de las étiquetas utilizando la propiedad que 
+    Podemos simplemente cambiar el contenido de las étiquetas utilizando la propiedad que
     vimos recién, '.textContent'.
 
     Ejemplo:
@@ -205,6 +230,11 @@
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
+const nuevoTitulo = "Cambiamos titulo utilizando js mediante propiedades"
+
+h1.textContent = nuevoTitulo; // Esto cambiara el contenido del 'h1'.
+console.log(h1.textContent); // vemos el cambio por consolo como tambien en la pagina.
+
 
 
 
@@ -212,7 +242,7 @@
 /*
     Editando atributos
     ==================
-    
+
     También podemos cambiar y establecer atributos en nuestros elementos.
 
     Ejemplo:
@@ -221,9 +251,12 @@
     ourTwitter.id = "sorpresa";
 */
 
-// TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
+// TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg"
 
 
+
+document.querySelector('img').src = 'img/kittens.jpeg';
+console.log(document.querySelector('img').src); // vemos el cambio por consolo como también en la
 
 
 
@@ -248,6 +281,8 @@
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
+const nuevoLogo = document.querySelector('#logo')
+nuevoLogo.style.backgroundColor = '#FFaF28';
 
 
 
@@ -278,6 +313,10 @@
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
+const nodoCabecera = document.querySelector("header"); // se selecciona el header
+const nuevaImagen = document.createElement("img");    //  se crea el elemnto nueva imagen
+nuevaImagen.src = "img/woman_bw.jpg";                 //  se asigna la uvicaion de la imagen a colocar
+nodoCabecera.appendChild(nuevaImagen);                // se agrega la imagen al header
 
 
 
