@@ -38,8 +38,8 @@ Ejemplo form:
   </form>
 
   <div id="resultado">Hola</div>
-*
-* */
+
+*/
 
 //TAREA: En otro archivo distinto,
 // Por cada clase de r/argentina programa existente, vamos a pedir:
