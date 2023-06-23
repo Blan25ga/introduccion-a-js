@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculos de grupo Familiar</title>
+</head>
+
+<body>
+    <h2>Calculadora de Edades del Grupo Famili</h2>
+    <label for="cantidad">Cantidad de personas en el grupo familiar:</label>
+    <input type="number" id="cantidad" min="1">
+    <button onclick="crearInputs()">Crear Inputs</button>
+
+    <div id="inputs-container"></div>
+
+    <button onclick="calcularEdades()">Calcular</button>
+    <p id="resultado"></p>
+
+    <button onclick="resetear()">Empezar de nuevo</button>
+
+    <hr>
+
+    <h2>Calculadora de Salarios del Grupo Familiar</h2>
+    <button onclick="agregarInput()">Agregar Input</button>
+    <button onclick="removerInput()">Remover Input</button>
+
+    <div id="salarios-container"></div>
+
+    <button onclick="calcularSalarios()">Calcular</button>
+    <p id="resultado-salarios"></p>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
