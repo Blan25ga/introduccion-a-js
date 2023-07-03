@@ -23,14 +23,14 @@ function probarValidarCiudad() {
     );
 }
 
-
-
 probarValidarCiudad();
+
+
 
 function probarValidarDescripcionRegalo() {
     console.assert(
-        validarDescripcionRegalo() === 'Por favor ingresa una descripción de regalo.',
-        'Validar Descripcion Regalo no validó que la descripción no este vacía',
+        validarDescripcionRegalo() === "La descripción de regalo debe contener al menos 5 letras.",
+        "Validar Descripcion Regalo no validó la longitud mínima de la descripción.",
     );
 }
 

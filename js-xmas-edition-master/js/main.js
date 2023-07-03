@@ -37,11 +37,13 @@ function validarCiudad() {
 
 
 
-
 function validarDescripcionRegalo() {
+    let descripcionRegalo = document.getElementById("descripcionRegalo").value;
     if (descripcionRegalo === "") {
-        return ("Por favor ingresa una descripción de regalo.");
+        return "Por favor, ingresa una descripción de regalo.";
+    } else if (descripcionRegalo.length < 5) {
+        return "La descripción de regalo debe contener al menos 5 letras.";
     } else {
-        return true;
+        return "";
     }
 }
