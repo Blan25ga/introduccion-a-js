@@ -1,9 +1,4 @@
 
-const $form = document.querySelector("#carta-a-santa")/*`const = document.querySelector("#carta-a-santa")` 
-está seleccionando el elemento HTML con el ID
-"carta-a-santa" y asignándola a la variable `` usando el método `document.querySelector()`
-en JavaScript. Esto nos permite acceder y manipular el elemento de formulario en nuestro código. */
-
 const nombre = $form.nombre.value
 const ciudad = $form.ciudad.value
 const comportamiento = $form.comportamiento.value
@@ -16,13 +11,12 @@ console.log(ciudad);
 console.log(comportamiento);
 console.log(descripcionRegalo);
 
-//funcion para validar nombre, que el campo tenga al menos un caracter, si no cuple la regla, lanzar un alerta, y si es mayor a 50 caracteres que diga que el campo tiene que tener menos de 50 caracteres.
 function validarNombre(nombre) {
     if (nombre.length < 1 || nombre.length > 50) {
         return ("Debe tener al menos un nombre de usuario de 1 a 50 caracteres")
     }
 
-    //escribir validacion para que la funcion solo acepte letras ?
+    //validacion para que la funcion solo acepte letras 
     if (!/^[A-z]+$/.test(nombre)) {
         return "El campo nombre solo recibe letras"
     }
@@ -51,3 +45,57 @@ function validarDescripcionRegalo() {
     }
 
 }
+
+function validarFormulario(event) {
+    const $form = document.querySelector("#carta-a-santa");
+
+    const nombre = $form.nombre.value;
+    const ciudad = $form.ciudad.value;
+    const descripcionRegalo = $form["descripcionRegalo"].value;
+
+    const errorNombre = validarNombre(nombre);
+    const errorCiudad = validarCiudad(ciudad);
+    const errorDescripcionRegalo = validarDescripcionRegalo(descripcion);
+
+
+    const errores = {
+        nombre: errorNombre,
+        ciudad: errorCiudad,
+        descripcionRegalo: errorDescripcionRegalo
+    };
+
+    console.log(errores);
+
+    manejarErrores(errores);
+
+    event.preventDefault();
+}
+
+function manejarErrores(errores) {
+
+
+    /*errorNombre = errores.nombre;
+    errorCiudad = errores.ciudad;
+    errorDescripcionRegalo = errores.descripcionRegalo;
+
+    if (errorNombre) {
+        $form.nombre.className = "error"
+    } else {
+        $form.nombre.className = "";
+    }
+
+    if (errorCiudad) {
+        $form.ciudad.className = "error"
+    } else {
+        $form.ciudad.className = "";
+    }
+-*/
+}
+
+
+
+
+const $form = document.querySelector("#carta-a-santa");
+$form.onsubmit = validarFormulario;
+
+
