@@ -18,10 +18,12 @@ probarValidarNombre();
 
 function probarValidarCiudad() {
     console.assert(
-        validarCiudad() === 'Por favor ingresa una ciudad.',
+        validarCiudad("") === 'Por favor ingresa una ciudad.',
         'Validar Ciudad no validó que la ciudad no este vacía',
     );
 }
+
+
 
 probarValidarCiudad();
 
