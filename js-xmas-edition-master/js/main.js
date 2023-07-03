@@ -17,33 +17,37 @@ console.log(comportamiento);
 console.log(descripcionRegalo);
 
 //funcion para validar nombre, que el campo tenga al menos un caracter, si no cuple la regla, lanzar un alerta, y si es mayor a 50 caracteres que diga que el campo tiene que tener menos de 50 caracteres.
-const validarNombre = (nombre) => {
+function validarNombre(nombre) {
     if (nombre.length < 1 || nombre.length > 50) {
         return ("Debe tener al menos un nombre de usuario de 1 a 50 caracteres")
-
-    } else {
-        return true;
     }
+
+    //escribir validacion para que la funcion solo acepte letras ?
+    if (!/^[A-z]+$/.test(nombre)) {
+        return "El campo nombre solo recibe letras"
+    }
+
+    return "";
 }
 
 
 function validarCiudad() {
-    if (ciudad === "") {
+    if (ciudad.length === 0) {
         return ("Por favor ingresa una ciudad.");
     } else {
-        return true;
+        return "";
     }
 }
 
 
 
 function validarDescripcionRegalo() {
-    let descripcionRegalo = document.getElementById("descripcionRegalo").value;
-    if (descripcionRegalo === "") {
-        return "Por favor, ingresa una descripción de regalo.";
-    } else if (descripcionRegalo.length >= 100) {
-        return "La descripción de regalo debe contener menos de 100 caracteres.";
+    if (descripcionRegalo.length >= 100) {
+        return "La descripción de regalo debe contener al menos de 100 caracteres.";
+    } else if (descripcionRegalo.length === 0) {
+        return "El campo de decripcion no puede estar vacio";
     } else {
-        return true;
+        return "";
     }
+
 }
