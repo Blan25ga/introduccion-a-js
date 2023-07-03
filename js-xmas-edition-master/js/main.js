@@ -35,7 +35,7 @@ function validarCiudad() {
     if (ciudad.length === 0) {
         return ("Por favor ingresa una ciudad.");
     } else {
-        return "";
+        return ""
     }
 }
 
